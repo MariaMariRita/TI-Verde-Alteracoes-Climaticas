@@ -9,5 +9,5 @@ def portal():
 @user_bp.before_request
 def check_login():
     if 'criado' not in session:
-        return redirect(url_for('templates.login'))
+        return redirect(url_for('auth.login'))
 
