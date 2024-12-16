@@ -6,8 +6,5 @@ user_bp = Blueprint('user', __name__, template_folder='templates')
 def portal():
     return render_template('portal_usuario.html')
 
-@user_bp.before_app_request
-def checar_autenticacao():
-    if 'criado' not in session:
-        return redirect('/login')
+
 
