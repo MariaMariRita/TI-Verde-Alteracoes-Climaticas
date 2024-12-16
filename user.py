@@ -1,4 +1,4 @@
-from flask import Blueprint, redirect, session, render_template
+from flask import Blueprint, redirect, session, render_template, url_for
 
 user_bp = Blueprint('user', __name__, template_folder='templates')
 
@@ -9,5 +9,5 @@ def portal():
 @user_bp.before_request
 def check_login():
     if 'criado' not in session:
-        return redirect("homepage.html")
+        return redirect(url_for('login.html'))
 
