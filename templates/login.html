@@ -21,6 +21,12 @@
             border-radius: 15px;
             color: white;
         }
+        fieldset{
+            border: 3px solid rgba(22, 163, 74, 0.9);
+        }
+        legend{
+            border: 3px solid rgba(22, 163, 74, 0.9);
+        }
         input{
             padding: 10px;
             border: none;
@@ -42,11 +48,15 @@
     </style>
 </head>
 <body>
-    <form method="POST">
-        <h1>Login</h1><br>
-        <input type="text" name= 'usuario' placeholder="Usuário"><br>
-        <input type="password" name= 'senha' placeholder="Senha"><br>
-        <button type="submit">Entrar</button>
-    </form>
+    <div>
+        <form method="POST">
+            <fieldset>
+                <legend>Login</legend><br><br>
+                <input type="text" name= 'usuario' placeholder="Usuário"><br><br>
+                <input type="password" name= 'senha' placeholder="Senha"><br><br>
+                <button type="submit">Entrar</button>
+            </fieldset>
+        </form>
+    </div>
 </body>
 </html>
