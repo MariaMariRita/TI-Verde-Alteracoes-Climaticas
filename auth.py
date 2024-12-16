@@ -8,5 +8,6 @@ def login():
         usuario = request.form['usuario']
         senha = request.form['senha']
         session['user'] = usuario
-        return render_template("index.html")
+        session['criado'] = True
+        return redirect(url_for('meu_site.homepage'))
     return render_template("login.html")

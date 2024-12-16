@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from auth import auth_bp
+from user import user_bp
 
 app = Flask(__name__)
 
@@ -21,7 +22,7 @@ def contatos():
 
 # Registrando blueprint.
 app.register_blueprint(auth_bp, url_prefix='/login')
-
+app.register_blueprint(user_bp, url_prefix='/user')
 
 if __name__ == "__main__":
     app.run(debug= True )

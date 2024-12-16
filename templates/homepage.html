@@ -35,14 +35,18 @@
             </div>
             <ul class="flex space-x-6 font-['Permanent Marker']">
                 <li>
-                    <a href="/" class="nav-item {% if active_page == 'home' %} active {% endif %}">Início</a>
+                    <a href="/" class="nav-item {% if active_page == 'home.html' %} active {% endif %}">Início</a>
                 </li>
                 <li>
-                    <a href="dados.html" class="nav-item {% if active_page == 'dados' %} active {% endif %}">Pontos de coleta</a>
+                    <a href="/dados" class="nav-item {% if active_page == 'dados.html' %} active {% endif %}">Pontos de coleta</a>
                 </li>
                 <li>
-                    <a href="sobre.html" class="nav-item {% if active_page == 'sobre' %} active {% endif %}">A equipe</a>
+                    <a href="/sobre" class="nav-item {% if active_page == 'sobre.html' %} active {% endif %}">A equipe</a>
                 </li>
+                <li>
+                    <link rel="shortcut icon" href="icone-usuario.ico" type="image/x-icon" />
+                    <a href="/user" class="nav-item {% if active_page == 'portal_usuario.html' %} active {% endif %}">Conta</a>
+                </li>   
             </ul>
         </div>
     </nav>
