@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <title>Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Sobre</title>
+    <style>
+        .nav-item {
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .nav-item:hover {
+            background-color: #d1f5d3;
+            color: #064e3b;
+        }
+        .active {
+            background-color: #e5e7eb;
+            color: #2563eb;
+            border: 2px solid #2563eb;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fa-solid fa-sun-plant-wilt fa-flip-horizontal mr-4" style="color: #FFD43B;"></i>
+                <span class="text-2xl font-bold text-green-600 font-['Bangers']">Portal Verde</span>
+            </div>
+            <ul class="flex space-x-6 font-['Permanent Marker']">
+                <li>
+                    <a href="/" class="nav-item {% if active_page == 'home' %} active {% endif %}">Início</a>
+                </li>
+                <li>
+                    <a href="/dados" class="nav-item {% if active_page == 'dados' %} active {% endif %}">Pontos de coleta</a>
+                </li>
+                <li>
+                    <a href="/sobre" class="nav-item {% if active_page == 'sobre' %} active {% endif %}">A equipe</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>

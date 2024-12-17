@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <title>Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Dados</title>
+    <style>
+        .nav-item {
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .nav-item:hover {
+            background-color: #d1f5d3;
+            color: #064e3b;
+        }
+        .active {
+            background-color: #e5e7eb;
+            color: #2563eb;
+            border: 2px solid #2563eb;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fa-solid fa-sun-plant-wilt fa-flip-horizontal mr-4" style="color: #FFD43B;"></i>
+                <span class="text-2xl font-bold text-green-600 font-['Bangers']">Portal Verde</span>
+            </div>
+            <ul class="flex space-x-6 font-['Permanent Marker']">
+                <li>
+                    <a href="/" class="nav-item {% if active_page == 'home' %} active {% endif %}">Início</a>
+                </li>
+                <li>
+                    <a href="/dados" class="nav-item {% if active_page == 'dados' %} active {% endif %}">Pontos de coleta</a>
+                </li>
+                <li>
+                    <a href="/sobre" class="nav-item {% if active_page == 'sobre' %} active {% endif %}">A equipe</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="flex min-h-screen bg-gray-50">
+        <!-- Barra lateral -->
+        <div class="w-64 bg-white shadow-lg">
+            <div class="p-4 bg-green-700">
+                <h2 class="text-white font-semibold text-lg">Portal de Dados</h2>
+            </div>
+            <nav class="p-4">
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#pontos" class="flex items-center p-3 text-gray-700 hover:bg-green-50 rounded-lg group/nav transition-all">
+                            <i class="fas fa-map-marker-alt mr-3"></i>
+                            <span>Pontos de Coleta Existentes</span>
+                            <i class="fas fa-chevron-right ml-auto opacity-0 group-hover/nav:opacity-100"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#mapa" class="flex items-center p-3 text-gray-700 hover:bg-green-50 rounded-lg group/nav transition-all">
+                            <i class="fas fa-map mr-3"></i>
+                            <span>Mapa Interativo</span>
+                            <i class="fas fa-chevron-right ml-auto opacity-0 group-hover/nav:opacity-100"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#estatisticas" class="flex items-center p-3 text-gray-700 hover:bg-green-50 rounded-lg group/nav transition-all">
+                            <i class="fas fa-chart-bar mr-3"></i>
+                            <span>Estatísticas</span>
+                            <i class="fas fa-chevron-right ml-auto opacity-0 group-hover/nav:opacity-100"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#documentos" class="flex items-center p-3 text-gray-700 hover:bg-green-50 rounded-lg group/nav transition-all">
+                            <i class="fas fa-file-alt mr-3"></i>
+                            <span>Documentos Oficiais</span>
+                            <i class="fas fa-chevron-right ml-auto opacity-0 group-hover/nav:opacity-100"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Área de conteúdo -->
+        <div class="flex-1 p-8">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <!-- Conteúdo dinâmico baseado na seleção -->
+                <div id="pontos" class="space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Pontos de Coleta Cadastrados</h3>
+                    <div class="divide-y">
+                        <div class="py-4 group/item hover:bg-gray-50 transition-all">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-800">Ecoponto Central</h4>
+                                    <p class="text-gray-600">Av. Principal, 1000 - Centro</p>
+                                </div>
+                                <div class="opacity-0 group-hover/item:opacity-100 transition-all">
+                                    <button class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+                                        Ver detalhes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mais pontos de coleta aqui -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
