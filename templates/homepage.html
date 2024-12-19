@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <title>Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Homepage</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Home Page</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Jaro:opsz@6..72&family=Oswald&family=Rakkas&display=swap');
         .nav-item {
             padding: 0.5rem 1rem;
             border-radius: 8px;
@@ -23,13 +25,56 @@
             border: 2px solid #2563eb;
             font-weight: bold;
         }
+        .content-box {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 0; 
+            width: 100%; 
+            text-align: center; 
+        }
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .content-icon {
+            margin-bottom: 1rem;
+        }
+        .topic-box {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            margin: 2rem auto; 
+            border-radius: 12px; 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+            width: 80%; 
+            max-width: 1000px; 
+        }
+
+        .topic-box h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1e3a8a; 
+            margin-bottom: 1.5rem;
+        }
+
+        .topic-box p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+        }
+
     </style>
 </head>
-<body>
+<body class="bg-gradient-to-r from-green-100 to-blue-100">
     <nav class="sticky top-0 z-50 bg-white shadow-md">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="flex items-center">
-                <i class="fa-solid fa-sun-plant-wilt fa-flip-horizontal mr-4" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-sun-plant-wilt fa-flip-horizontal mr-4" style="color: #0e047d;"></i>
                 <span class="text-2xl font-bold text-green-600 font-['Bangers']">Portal Verde</span>
             </div>
             <ul class="flex space-x-6 font-['Permanent Marker']">
@@ -45,5 +90,240 @@
             </ul>
         </div>
     </nav>
-</body>
-</html>
+
+    
+    <div class="bg-green-700 text-white py-2 text-center">
+        <p class="text-sm">Portal Regional: Coletas de Resíduos Eletrônicos</p>
+    </div>
+
+    
+    <div class="content-box bg-white">
+        <div class="mx-auto content-container max-w-6xl">
+            <div class="grid grid-cols-2 gap-8 items-center">
+                <div class="text-left">
+                    <h1 class="text-5xl font-bold text-gray-800 font-['Oswald'] mb-4">Portal Verde: Conexões sustentáveis entre o meio ambiente e a tecnologia </h1>
+                    <h6 class="text-xl text-gray-600 font-['Alegreya'] leading-relaxed">Iniciativa estudantil que visa promover o descarte consiente e sustentável de equipamentos eletrônicos
+                        em Alagoas </h6>
+                    <div class="mt-8">
+                        <a href="/dados" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">Encontre os pontos de coleta</a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <img src="imagens/globo.png" alt="Ícone sustentabilidade" class="w-64 h-64 object-contain">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="flex gap-3 overflow-x-auto snap-x">
+        <div class="round-lg border-2 snap-center flex-shrink-0">
+          <img class="h-auto max-w-full" src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" alt="Imagem 1" />
+        </div>
+        <div class="round-lg border-2 snap-center flex-shrink-0">
+          <img class="h-auto max-w-full" src="https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" alt="Imagem 2" />
+        </div>
+        <div class="round-lg border-2 snap-center flex-shrink-0">
+          <img class="h-auto max-w-full" src="https://images.unsplash.com/photo-1622890806166-111d7f6c7c97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" alt="Imagem 3" />
+        </div>
+        <div class="round-lg border-2 snap-center flex-shrink-0">
+          <img class="h-auto max-w-full" src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" alt="Imagem 4" />
+        </div>
+        <div class="round-lg border-2 snap-center flex-shrink-0">
+          <img class="h-auto max-w-full" src="https://images.unsplash.com/photo-1575424909138-46b05e5919ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" alt="Imagem 5" />
+        </div>
+        <div class="round-lg border-2 snap-center flex-shrink-0">
+          <img class="h-auto max-w-full" src="https://images.unsplash.com/photo-1559333086-b0a56225a93c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" alt="Imagem 6" />
+        </div>
+      </div>
+      
+      <div class="topic-box bg-gray-100 border border-gray-300 rounded-lg p-8 shadow-md relative">
+        
+        <h3 class="text-xl font-semibold mb-4 text-gray-800">Sobre resíduo eletrônico</h3>
+        
+        
+        <h6 class="text-gray-700 leading-relaxed relative group cursor-pointer">
+            Com o decorrer do tempo, a humanidade começou a desenvolver avanços 
+            científicos e tecnológicos, englobando várias áreas de conhecimento.
+            Não se tem um conceito concreto sobre o tema, no entanto o mesmo vem 
+            sendo caracterizado como os resíduos gerados pelos aparelhos eletrônicos: 
+            celulares, computadores, geladeiras, entre outros objetos definidos como
+            danificáveis e passíveis de serem descartados.
+    
+            
+            <div class="absolute top-0 left-0 mt-4 p-4 w-full bg-blue-50 border-l-4 border-blue-400 
+            rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 
+            group-hover:visible transition-all duration-500 ease-in-out z-50">
+                <div class="flex items-start">
+                    <i class="fas fa-info-circle text-blue-400 text-2xl mr-3"></i>
+                    <div>
+                        <h5 class="font-semibold text-blue-600 mb-1">Além disso...</h5>
+                        <p class="text-blue-700 text-sm leading-relaxed">
+                            De acordo com "The global E-waste Monitor 2024", em 2022 foram gerados 
+                            62 bilhões de quilos de lixo eletrônico no mundo, dentre essa quantidade 
+                            apenas 22.3% foi documentada como coletada e reciclada corretamente. 
+                            Além disso, o Brasil é o maior gerador de lixo eletrônico da América latina como 2,4 bilhões de quilo anualmente
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </h6>
+    </div>
+
+    <div class="topic-box bg-gray-100 border border-gray-300 rounded-lg p-8 shadow-md relative">
+        
+        <h3 class="text-xl font-semibold mb-4 text-gray-800">Principal agravante: obsolescência programada</h3>
+        
+        
+        <h6 class="text-gray-700 leading-relaxed relative group cursor-pointer">
+            Em 1929, ocorria a chamada “Grande Depressão”, uma crise de forte recessão econômica
+            que atingiu o capitalismo internacional. Além disso, nesse período começa a surgir o termo
+            “Obsolescência programada” quando um fabricante decide reduzir o tempo de vida útil das
+            lâmpadas a fim de estimular o mercado para cada vez mais ocorrer o seu consumo.
+            Portanto, o consumidor -de cunho consumista- com uma fragilidade emocional perante a
+            um mercado agressivo, acontece que o fato de comprar um produto ou serviço não vai estar
+            mais relacionado com a necessidade de uso do bem e sim o desejo crescente de satisfação e
+            felicidade imposto pela economia e sociedade.
+        <h6 class="text-gray-700 leading-relaxed relative group cursor-pointer">
+            Esta prática vem sendo frequente na sociedade e se apresenta 
+            de diversas formas, seja pela inserção de novas tecnologias ou pela 
+            descontinuação e mudança do design dos aparelhos, levando o cliente a
+            uma necessidade de obter peças de nova geração,uma vez que as antigas
+            ficam ultrapassadas.
+        </h6>
+    </div>
+
+    <div class="topic-box bg-gray-100 border border-gray-300 rounded-lg p-8 shadow-md relative">
+        
+        <h3 class="text-xl font-semibold mb-4 text-gray-800">Perigos do descarte inadequado</h3>
+        
+        
+        <h6 class="text-gray-700 leading-relaxed relative group cursor-pointer">
+            O lixo eletrônico é formado por materiais variados desde plástico a substâncias químicas 
+            valiosas e difíceis de encontrar e manusear, contendo componentes tóxicos em sua estrutura 
+            que causam grandes danos ao meio ambiente se descartados inadequadamente, como por
+            exemplo a contaminação do solo.
+            desenvolvidos.Os Resíduos de Equipamentos Elétricos e Eletrônicos (REEE) (celulares,
+            computadores e afins) são compostos basicamente por materiais poliméricos e metálicos.
+            Apresentam em sua constituição metais pesados e outros componentes, como os
+            retardadores de chama bromados, que ao serem descartados no solo, em aterros ou lixões,
+            podem causar danos graves ao meio ambiente e à saúde das pessoas.
+            Ademais, Quando presente no ambiente, o chumbo tem baixa mobilidade no solo, o que resulta em sua
+            permanência prolongada e na possibilidade de poluir lençois freáticos e ecossistemas próximos.
+    
+            
+            <div class="absolute top-0 left-0 mt-4 p-4 w-full bg-blue-50 border-l-4 border-blue-400 
+            rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 
+            group-hover:visible transition-all duration-500 ease-in-out z-50">
+                <div class="flex items-start">
+                    <i class="fas fa-info-circle text-blue-400 text-2xl mr-3"></i>
+                    <div>
+                        <h5 class="font-semibold text-blue-600 mb-1">Além disso...</h5>
+                        <p class="text-blue-700 text-sm leading-relaxed">
+                            Segundo o CETEM, cerca de 70% dos metais pesados encontrados em lixões 
+                            e aterros sanitários controlados são
+                            provenientes de equipamentos eletrônicos descartados incorretamente,
+                            além de contaminar os lençóis freáticos comprometendo a qualidade da
+                            água potável e sua disponibilidade.
+                            Por exemplo, a queima de
+                            PVC libera toxinas como dioxinas e furanos, que podem afetar o homem alterando suas
+                            funções hormonais ou, ainda, contaminando o leite materno.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </h6>
+    </div>
+    
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Soluções de Ação Regional</h2>
+            
+            <!-- Usando flex ao invés de grid -->
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- Os 4 cards aqui mantêm o mesmo conteúdo -->
+                <!-- Cada card receberá uma largura fixa -->
+                <div class="flex-shrink-0 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)]">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg border-t-4 border-green-600">
+                        <div class="p-6">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-recycle text-green-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Economia Circular</h3>
+                            <p class="text-gray-600">Estratégia que visa reutilizar o máximo os componentes
+                                de um resíduo, a fim de formar um novo produto</p>
+                            <ul class="mt-4 space-y-2 text-gray-600">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    Reaproveitamento de componentes
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    O cobre por exemplo é um material que pode ser reciclado repetidamente
+                                    sem perda de desempenho.
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    Redução do impacto ambiental
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                  
+                <div class="flex-shrink-0 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)]">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg border-t-4 border-amber-600">
+                        <div class="p-6">
+                            <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-microchip text-amber-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Pontos de Coleta</h3>
+                            <p class="text-gray-600">Desenvolver um site acessível a fim de divulgar com maior escala os pontos de descarte</p>
+                            <ul class="mt-4 space-y-2 text-gray-600">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-amber-500 mr-2"></i>
+                                    O Portal Verde aplica tal solução em prática
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-amber-500 mr-2"></i>
+                                    Divulgar pontos de coleta existentes
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-amber-500 mr-2"></i>
+                                    Sugerir publicamente possíveis pontos de coleta
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="flex-shrink-0 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)]">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg border-t-4 border-indigo-600">
+                        <div class="p-6">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-globe-americas text-indigo-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Divulgação escolar: Onde tudo começa</h3>
+                            <p class="text-gray-600">Manter os estudantes informados sobre o tema para que conheçam seus deveres com o ambiente</p>
+                            <ul class="mt-4 space-y-2 text-gray-600">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-indigo-500 mr-2"></i>
+                                    A realização de oficinas que abordem o estudo dos componentes químicos presentes em
+                                    dispositivos eletrônicos
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-indigo-500 mr-2"></i>
+                                    Promove a conscientização sobre a gestão dos resíduos
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-indigo-500 mr-2"></i>
+                                    Incentiva os jovens a participar de projetos sociais e de responsabilidade social
+                                </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

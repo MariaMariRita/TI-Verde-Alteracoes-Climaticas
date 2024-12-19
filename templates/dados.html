@@ -3,29 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <title>Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Dados</title>
-    <style>
-        .nav-item {
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-        .nav-item:hover {
-            background-color: #d1f5d3;
-            color: #064e3b;
-        }
-        .active {
-            background-color: #e5e7eb;
-            color: #2563eb;
-            border: 2px solid #2563eb;
-            font-weight: bold;
-        }
-    </style>
+    <title>Portal Verde</title>
 </head>
-<body>
+<body class="bg-gray-50">
     <nav class="sticky top-0 z-50 bg-white shadow-md">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="flex items-center">
@@ -34,16 +16,90 @@
             </div>
             <ul class="flex space-x-6 font-['Permanent Marker']">
                 <li>
-                    <a href="/" class="nav-item {% if active_page == 'home' %} active {% endif %}">Início</a>
+                    <a href="/" class="px-4 py-2 rounded-lg font-bold transition duration-300 hover:bg-green-100 hover:text-green-800">Início</a>
                 </li>
                 <li>
-                    <a href="/dados" class="nav-item {% if active_page == 'dados' %} active {% endif %}">Pontos de coleta</a>
+                    <a href="/dados" class="px-4 py-2 rounded-lg font-bold text-blue-600 transition duration-300 hover:bg-blue-100 hover:text-blue-800 active:bg-gray-200">Pontos de coleta</a>
                 </li>
                 <li>
-                    <a href="/sobre" class="nav-item {% if active_page == 'sobre' %} active {% endif %}">A equipe</a>
+                    <a href="/sobre" class="px-4 py-2 rounded-lg font-bold transition duration-300 hover:bg-green-100 hover:text-green-800">A equipe</a>
                 </li>
             </ul>
         </div>
     </nav>
+
+    <div class="flex min-h-screen">
+        <!-- Barra lateral -->
+        <div class="w-64 bg-white shadow-lg">
+            <div class="p-4 bg-green-700">
+                <h2 class="text-white font-semibold text-lg">Portal de Dados</h2>
+            </div>
+            <nav class="p-4">
+                <ul class="space-y-2">
+                    <li>
+                        <div class="cursor-pointer flex items-center p-3 rounded-lg hover:bg-green-100 transition duration-300" data-target="pontos">
+                            <i class="fas fa-map-marker-alt mr-3"></i>
+                            <span>Pontos de Coleta Existentes</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cursor-pointer flex items-center p-3 rounded-lg hover:bg-green-100 transition duration-300" data-target="sugestoes">
+                            <i class="fas fa-map mr-3"></i>
+                            <span>Sugestão de Pontos de Coleta</span>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Área de conteúdo -->
+        <div class="flex-1 p-8">
+            <div id="pontos" class="content-section block">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-6">Pontos de Coleta Existentes</h3>
+                <div class="w-full rounded-lg overflow-hidden shadow-lg mb-6">
+                    <iframe 
+                        src="https://www.google.com/maps/d/embed?mid=1lbRPTwiq2NyhRor_4XqhtlPrEkf4HDs&ehbc=2E312F" 
+                        width="100%" 
+                        height="480" 
+                        loading="lazy"
+                        class="rounded-lg border-3 border-blue-500">
+                    </iframe>
+                </div>
+            </div>
+
+            <div id="sugestoes" class="content-section hidden">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-6">Sugestão de Pontos de Coleta</h3>
+                <div class="w-full border-3 border-blue-500 rounded-lg overflow-hidden shadow-lg mb-6">
+                    <iframe 
+                        src="https://www.google.com/maps/d/embed?mid=1lbRPTwiq2NyhRor_4XqhtlPrEkf4HDs&ehbc=2E312F" 
+                        width="100%" 
+                        height="480" 
+                        loading="lazy"
+                        class="rounded-lg">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sideButtons = document.querySelectorAll('.side-button');
+
+            sideButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetSection = button.getAttribute('data-target');
+
+                    document.querySelectorAll('.content-section').forEach(section => {
+                        section.classList.remove('block');
+                        section.classList.add('hidden');
+                    });
+
+                    document.getElementById(targetSection).classList.remove('hidden');
+                    document.getElementById(targetSection).classList.add('block');
+                });
+            });
+        });
+    </script>
 </body>
 </html>

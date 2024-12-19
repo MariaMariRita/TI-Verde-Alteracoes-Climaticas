@@ -1,18 +1,18 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder= 'imagens')
 
 @app.route("/")
 def homepage():
-    return render_template("homepage.html")
+    return render_template("homepage.html", active_page="home")
 
-@app.route("/contatos")
-def contatos():
-    return render_template("contatos.html")
+@app.route("/dados")
+def dados():
+    return render_template("dados.html", active_page="dados")
 
-@app.route("/usuario/<nome_usuario>")
-def usuarios(nome_usuario):
-    return render_template("usuarios.html", nome_usuario = nome_usuario)
+@app.route("/sobre")
+def sobre():
+    return render_template("sobre.html", active_page="sobre")
 
 if __name__ == "__main__":
-    app.run(debug= True )
+    app.run(debug=True)
