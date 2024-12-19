@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Portal Verde</title>
+    <link rel="shortcut icon" href="icone-casa.ico" type="image/x-icon" /> 
 </head>
 <body class="bg-gray-50">
     <nav class="sticky top-0 z-50 bg-white shadow-md">
@@ -23,6 +24,10 @@
                 </li>
                 <li>
                     <a href="/sobre" class="px-4 py-2 rounded-lg font-bold transition duration-300 hover:bg-green-100 hover:text-green-800">A equipe</a>
+                </li>
+                <li>
+                    <link rel="shortcut icon" href="icone-usuario.ico" type="image/x-icon" />
+                    <a href="/user" class="nav-item {% if active_page == 'portal_usuario.html' %} active {% endif %}">Conta</a>
                 </li>
             </ul>
         </div>
