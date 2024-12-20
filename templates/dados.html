@@ -10,15 +10,21 @@
     <nav class="p-4">
         <ul class="space-y-2">
             <li>
-                <div class="cursor-pointer flex items-center p-3 rounded-lg hover:bg-green-100 transition duration-300" data-target="pontos">
+                <div class="cursor-pointer flex items-center p-3 rounded-lg hover:bg-green-100 transition duration-300 side-button" data-target="pontos">
                     <i class="fas fa-map-marker-alt mr-3"></i>
                     <span>Pontos de Coleta Existentes</span>
                 </div>
             </li>
             <li>
-                <div class="cursor-pointer flex items-center p-3 rounded-lg hover:bg-green-100 transition duration-300" data-target="sugestoes">
+                <div class="cursor-pointer flex items-center p-3 rounded-lg hover:bg-green-100 transition duration-300 side-button" data-target="sugestoes">
                     <i class="fas fa-map mr-3"></i>
                     <span>Sugestão de Pontos de Coleta</span>
+                </div>
+            </li>
+            <li>
+                <div class="cursor-pointer flex items-center p-3 rounded-lg hover:bg-green-100 transition duration-300 side-button" data-target="informacoes">
+                    <i class="fas fa-info-circle mr-3"></i>
+                    <span>Mais Informações</span>
                 </div>
             </li>
         </ul>
@@ -41,15 +47,99 @@
     </div>
 
     <div id="sugestoes" class="content-section hidden">
-        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Sugestão de Pontos de Coleta</h3>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Sugestões de Pontos de Coletas</h3>
         <div class="w-full border-3 border-blue-500 rounded-lg overflow-hidden shadow-lg mb-6">
             <iframe 
-                src="https://www.google.com/maps/d/embed?mid=1lbRPTwiq2NyhRor_4XqhtlPrEkf4HDs&ehbc=2E312F" 
+                src="https://www.google.com/maps/d/embed?mid=1v-sBe-z21ziji3jdh2uCXWfFvDgtfPU&ehbc=2E312F" 
                 width="100%" 
                 height="480" 
                 loading="lazy"
                 class="rounded-lg">
             </iframe>
+        </div>
+        <div class="mt-6">
+            <button class="bg-green-700 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-800 transition duration-300 mb-4">
+                Mais Informações Sobre os Pontos Sugeridos
+            </button>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="text-gray-700 leading-relaxed">
+                    A seleção de pontos de coleta de lixo eletrônico foi realizada de forma criteriosa, com base em uma análise abrangente de fatores técnicos, ambientais, sociais, econômicos e regulatórios. Nosso processo incluiu uma avaliação detalhada da infraestrutura disponível, do impacto ambiental, da acessibilidade, da participação comunitária, da viabilidade econômica e da conformidade com as normas regulatórias. Durante a identificação de locais potenciais, priorizamos cidades com as maiores estruturas econômicas e pontos estratégicos para o descarte adequado de resíduos eletrônicos.  Concentramos a análise em três cidades-chave, considerando a localização estratégica, a infraestrutura adequada e a proximidade com empresas de tecnologia. Além disso, avaliamos o acesso a recursos universitários, centros de pesquisa e desenvolvimento, a centralização das áreas, a acessibilidade e a autoridade municipal, bem como a visibilidade pública e o potencial para campanhas de conscientização.
+                </p>
+                <ul class="list-disc ml-6 mt-4 text-gray-700">
+                    <li>1. Infraestrutura adequada (espaço, acessibilidade e equipamentos necessários)</li>
+                    <li>2. Proximidade a áreas industriais e comerciais relevantes</li>
+                    <li>3. Acesso público e visibilidade para facilitar a participação da comunidade</li>
+                    <li>4. Potencial para parcerias e colaborações com empresas e universidades</li>
+                    <li>5. Conformidade com a legislação ambiental vigente</li>
+                    <li>6. Capacidade de armazenamento e processamento dos resíduos</li>
+                    <li>7. Promoção de educação ambiental e conscientização da população</li>
+                </ul>
+                <div class="mt-6 border-t pt-4">
+                    <h4 class="font-semibold text-gray-800 mb-2">Referências</h4>
+                    <p class="text-gray-700">
+                        <strong>Análise Gestora:</strong><br>
+                        SILVA, J. et al. (2020). Critérios para seleção de pontos de coleta de resíduos eletrônicos. Revista de Engenharia Sanitária, 17(2), 123-135.<br>
+                        SANTOS, R. et al. (2019). Gestão de resíduos eletrônicos em Alagoas. Revista de Meio Ambiente e Sustentabilidade, 13(1), 45-56.<br>
+                        Lei de Resíduos Sólidos (12.305/2010). Brasília: Presidência da República.
+                    </p>
+                    <p class="text-gray-700 mt-4">
+                        <strong>Análise de Tabelas Econômicas das Cidades:</strong><br>
+                        <a href="https://www.empresaqui.com.br/listas-de-empresas/" class="text-blue-600 hover:underline">Empresaqui - Listas de empresas</a><br>
+                        <a href="https://www.tnh1.com.br/noticia/nid/veja-os-municipios-de-al-com-o-maior-numero-de-empresas-abertas-no-1o-semestre-de-2023/" class="text-blue-600 hover:underline">TNH1 - Municípios de AL com maior número de empresas abertas</a>
+                    </p>
+                    <p class="text-gray-700 mt-4">
+                        <strong>Análise Geral:</strong><br>
+                        Artigos científicos (Scopus, ScienceDirect)<br>
+                        Dados estatísticos (IBGE, Ministério do Meio Ambiente)<br>
+                        Legislação ambiental<br>
+                        Tabelas de critérios de seleção
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="informacoes" class="content-section hidden">
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="p-8">
+                <h1 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-4">Análise Ambiental no Brasil</h1>
+                
+                <!-- Gráfico 1 -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold text-green-700 mb-4">Emissões de Gases Agravantes do Efeito Estufa (1970-2020)</h2>
+                    <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                        <img src="imagens/dados/grafico1.png" alt="Emissões de Gases Agravantes do Efeito Estufa" class="w-full rounded-lg shadow-sm mb-4">
+                        <p class="text-gray-700 leading-relaxed">O gráfico mostra o aumento das emissões de gases agravantes do efeito estufa no Brasil entre 1970 e 2020, evidenciando o impacto das atividades industriais, agrícolas e do setor de energia nas mudanças climáticas. A tendência crescente ao longo das décadas reforça a necessidade urgente de políticas públicas para mitigar os impactos ambientais e reduzir a pegada de carbono no país.</p>
+                    </div>
+                </section>
+                
+                <!-- Gráfico 2 -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold text-green-700 mb-4">Emissão Total por Ano dividida em Setores: Agropecuária e Energia</h2>
+                    <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                        <img src="imagens/dados/grafico2.png" alt="Emissão Total por Ano dividida em Setores" class="w-full rounded-lg shadow-sm mb-4">
+                        <p class="text-gray-700 leading-relaxed">Este gráfico detalha a emissão total de gases do efeito estufa por ano, dividida entre os setores de agropecuária e energia. Observa-se que a agropecuária é responsável por uma parcela significativa das emissões, principalmente devido à produção de gado e à queima de biomassa, enquanto o setor de energia também contribui consideravelmente, principalmente por meio da geração de eletricidade a partir de fontes fósseis.</p>
+                    </div>
+                </section>
+                
+                <!-- Gráfico 3 -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold text-green-700 mb-4">Tendência do Lixo Gerado, Reciclado e Não Reciclado no Brasil (2018-2022)</h2>
+                    <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                        <img src="imagens/dados/grafico3.png" alt="Tendência do Lixo Gerado" class="w-full rounded-lg shadow-sm mb-4">
+                        <p class="text-gray-700 leading-relaxed">O gráfico ilustra a evolução do lixo gerado no Brasil entre 2018 e 2022, destacando a quantidade reciclada em comparação com o lixo não reciclado. Embora tenha ocorrido um aumento na reciclagem, ainda há uma quantidade significativa de resíduos que não são reciclados, o que representa um desafio para a sustentabilidade e gestão eficiente de resíduos no país.</p>
+                    </div>
+                </section>
+                
+                <!-- Gráfico 4 -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold text-green-700 mb-4">Principais Cidades na Coleta de Resíduos de 2014 a 2020</h2>
+                    <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                        <img src="imagens/dados/grafico4.png" alt="Principais Cidades na Coleta de Resíduos" class="w-full rounded-lg shadow-sm mb-4">
+                        <p class="text-gray-700 leading-relaxed">Este gráfico mostra as cidades brasileiras com melhor desempenho na coleta de resíduos entre 2014 e 2020. A análise destaca a importância das políticas municipais para o gerenciamento de resíduos sólidos, evidenciando os avanços em algumas regiões, mas também apontando áreas onde o sistema de coleta ainda precisa de melhorias para atender à crescente demanda.</p>
+                    </div>
+                </section>
+            </div>
         </div>
     </div>
 </div>
