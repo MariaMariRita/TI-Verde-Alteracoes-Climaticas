@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Portal Verde</title>
+    <link rel="shortcut icon" href="icone-casa.ico" type="image/x-icon" /> 
+</head>
+<body class="bg-gray-50">
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fa-solid fa-sun-plant-wilt fa-flip-horizontal mr-4" style="color: #FFD43B;"></i>
+                <span class="text-2xl font-bold text-green-600 font-['Bangers']">Portal Verde</span>
+            </div>
+            <ul class="flex space-x-6 font-['Permanent Marker']">
+                <li>
+                    <a href="/" class="px-4 py-2 rounded-lg font-bold transition duration-300 hover:bg-green-100 hover:text-green-800">Início</a>
+                </li>
+                <li>
+                    <a href="/dados" class="px-4 py-2 rounded-lg font-bold text-blue-600 transition duration-300 hover:bg-blue-100 hover:text-blue-800 active:bg-gray-200">Pontos de coleta</a>
+                </li>
+                <li>
+                    <a href="/sobre" class="px-4 py-2 rounded-lg font-bold transition duration-300 hover:bg-green-100 hover:text-green-800">A equipe</a>
+                </li>
+                <li>
+                    <link rel="shortcut icon" href="icone-usuario.ico" type="image/x-icon" />
+                    <a href="/user" class="nav-item {% if active_page == 'portal_usuario.html' %} active {% endif %} px-4 py-2 rounded-lg font-bold transition duration-300 hover:bg-green-100 hover:text-green-800">Conta</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="flex min-h-screen">
+    
+        {% block content %}{% endblock content %}
+    </div>
+
+    
+</body>
+</html>
