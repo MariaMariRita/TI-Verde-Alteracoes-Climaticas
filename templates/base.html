@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagens/icone-sol.ico" type="image/x-icon" /> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Portal Verde</title>
-    <link rel="shortcut icon" href="icone-casa.ico" type="image/x-icon" /> 
+    <title>Dados</title>
+    <style>
+        .active {
+            background-color: #e5e7eb;
+            color: #000000;
+            border: 2px solid #6EE7B7;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
     <nav class="sticky top-0 z-50 bg-white shadow-md">
@@ -17,17 +25,16 @@
             </div>
             <ul class="flex space-x-6 font-['Permanent Marker']">
                 <li>
-                    <a href="/" class="px-4 py-2 rounded-lg font-bold transition duration-300 hover:bg-green-100 hover:text-green-800">Início</a>
+                    <a href="/" class="nav-item px-4 py-2 rounded-lg font-bold transition duration-300 hover:bg-green-100 hover:text-green-800">Início</a>
                 </li>
                 <li>
-                    <a href="/dados" class="px-4 py-2 rounded-lg font-bold text-blue-600 transition duration-300 hover:bg-blue-100 hover:text-blue-800 active:bg-gray-200">Pontos de coleta</a>
+                    <a href="/dados" class="nav-item active px-4 py-2 rounded-lg font-bold transition duration-300 hover:bg-green-100 hover:text-green-800">Pontos de coleta</a>
                 </li>
                 <li>
-                    <a href="/sobre" class="px-4 py-2 rounded-lg font-bold transition duration-300 hover:bg-green-100 hover:text-green-800">A equipe</a>
+                    <a href="/sobre" class="nav-item px-4 py-2 rounded-lg font-bold transition duration-300 hover:bg-green-100 hover:text-green-800">A equipe</a>
                 </li>
                 <li>
-                    <link rel="shortcut icon" href="icone-usuario.ico" type="image/x-icon" />
-                    <a href="/user" class="nav-item {% if active_page == 'portal_usuario.html' %} active {% endif %} px-4 py-2 rounded-lg font-bold transition duration-300 hover:bg-green-100 hover:text-green-800">Conta</a>
+                    <a href="/user" class="nav-item px-4 py-2 rounded-lg font-bold transition duration-300 hover:bg-green-100 hover:text-green-800">Conta</a>
                 </li>
             </ul>
         </div>

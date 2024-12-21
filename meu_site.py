@@ -1,8 +1,11 @@
 from flask import Flask, render_template
 from auth import auth_bp
 from user import user_bp
+from secrets import token_hex
 
 app = Flask(__name__, static_folder= 'imagens')
+
+app.config['SECRET_KEY'] = token_hex(24)
 
 @app.route("/")
 def homepage():
@@ -16,12 +19,8 @@ def sobre():
 def dados():
     return render_template("dados.html")
 
-@app.route("/contatos")
-def contatos():
-    return render_template("contatos.html")
-
 # Registrando blueprint.
-app.register_blueprint(auth_bp, url_prefix='/login')
+app.register_blueprint(auth_bp, url_prefix='/auth')
 app.register_blueprint(user_bp, url_prefix='/user')
 
 if __name__ == "__main__":

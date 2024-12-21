@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagens/icone-sol.ico" type="image/x-icon" /> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="icone-casa.ico" type="image/x-icon" /> 
     <title>Portal Verde</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Jaro:opsz@6..72&family=Oswald&family=Rakkas&display=swap');
@@ -22,8 +22,8 @@
         }
         .active {
             background-color: #e5e7eb;
-            color: #2563eb;
-            border: 2px solid #2563eb;
+            color: #000000;
+            border: 2px solid #6EE7B7;
             font-weight: bold;
         }
         .content-box {
@@ -75,23 +75,22 @@
     <nav class="sticky top-0 z-50 bg-white shadow-md">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="flex items-center">
-                <i class="fa-solid fa-sun-plant-wilt fa-flip-horizontal mr-4" style="color: #0e047d;"></i>
+                <i class="fa-solid fa-sun-plant-wilt fa-flip-horizontal mr-4" style="color: #FFD43B;"></i>
                 <span class="text-2xl font-bold text-green-600 font-['Bangers']">Portal Verde</span>
             </div>
             <ul class="flex space-x-6 font-['Permanent Marker']">
                 <li>
-                    <a href="/" class="nav-item {% if active_page == 'home.html' %} active {% endif %}">Início</a>
+                    <a href="/" class="nav-item active px-4 py-2 rounded-lg font-bold transition duration-300 hover:bg-green-100 hover:text-green-800">Início</a>
                 </li>
                 <li>
-                    <a href="/dados" class="nav-item {% if active_page == 'dados.html' %} active {% endif %}">Pontos de coleta</a>
+                    <a href="/dados" class="nav-item px-4 py-2 rounded-lg font-bold  transition duration-300 hover:bg-green-100 hover:text-green-800">Pontos de coleta</a>
                 </li>
                 <li>
-                    <a href="/sobre" class="nav-item {% if active_page == 'sobre.html' %} active {% endif %}">A equipe</a>
+                    <a href="/sobre" class="nav-item px-4 py-2 rounded-lg font-bold transition duration-300 hover:bg-green-100 hover:text-green-800">A equipe</a>
                 </li>
                 <li>
-                    <link rel="shortcut icon" href="icone-usuario.ico" type="image/x-icon" />
-                    <a href="/user" class="nav-item {% if active_page == 'portal_usuario.html' %} active {% endif %}">Conta</a>
-                </li>   
+                    <a href="/user" class="nav-item px-4 py-2 rounded-lg font-bold transition duration-300 hover:bg-green-100 hover:text-green-800">Conta</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -120,10 +119,7 @@
         </div>
     </div>
 
-    
-    
-      
-      <div class="topic-box bg-gray-100 border border-gray-300 rounded-lg p-8 shadow-md relative">
+    <div class="topic-box bg-gray-100 border border-gray-300 rounded-lg p-8 shadow-md relative">
         
         <h3 class="text-xl font-semibold mb-4 text-gray-800">Sobre resíduo eletrônico</h3>
         
@@ -256,7 +252,7 @@
                         </div>
                     </div>
                 </div>
-                  
+
                 <div class="flex-shrink-0 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)]">
                     <div class="bg-white rounded-lg overflow-hidden shadow-lg border-t-4 border-amber-600">
                         <div class="p-6">

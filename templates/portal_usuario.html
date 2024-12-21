@@ -3,14 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagens/icone-sol.ico" type="image/x-icon" /> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" href="icone-casa.ico" type="image/x-icon" /> 
     <title>Portal do Usuário</title>
+    <style>
+        .active {
+            background-color: #e5e7eb;
+            color: #000000;
+            border: 2px solid #6EE7B7;
+            font-weight: bold;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .sidebar {
+            width: 250px;
+            padding-top: 20px;
+            position: fixed;
+            height: 100%;
+        }
+        .sidebar a {
+            color: black;
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 17px;
+            margin-bottom: 10px;
+            font-family: 'Permanent Marker', sans-serif;
+            width: calc(100% - 20px);
+        }
+        .sidebar a:hover {
+            background-color: #D1FAE5;
+            margin-left: 10px;
+            transition: margin-left 0.3s ease;
+        }
+        .main-content {
+            margin-left: 220px;
+            padding: 20px;
+            width: calc(100% - 220px);
+            margin-top: 80px;
+        }
+        .box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .box h3 {
+            margin-top: 0;
+            color: black;
+            background-color: rgba(0, 122, 204, 0.2);
+            position: absolute;
+            padding: 6px;
+            border-radius: 5px;
+            left: 19%;
+        }
+        .box p {
+            font-size: 16px;
+            color: black;
+        }
+        .box .botao{
+            background-color: #808080;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .box .botao-logout:hover {
+            background-color: #A9A9A9;
+        }
+        .box .botao-logout{
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .box .botao-logout:hover {
+            background-color: #c0392b;
+        }
+    </style>
 </head>
-<body>
-    <h1>Portal do usuário</h1>
-    <p>nome, informações pessoais, contato, e-mail, preferencia de idioma, endereço, idade, tema (claro/escuro),alterar senha, logout, 
-        excluir conta</p>
+<body class="bg-gradient-to-r from-green-100 to-blue-100">
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fa-solid fa-sun-plant-wilt fa-flip-horizontal mr-4" style="color: #FFD43B;"></i>
+                <span class="text-2xl font-bold text-green-600 font-['Bangers']">Portal Verde</span>
+            </div>
+            <ul class="flex space-x-6 font-['Permanent Marker']">
+                <li>
+                    <a href="/" class="nav-item px-4 py-2 rounded-lg font-bold transition duration-300 hover:bg-green-100 hover:text-green-800">Início</a>
+                </li>
+                <li>
+                    <a href="/dados" class="nav-item px-4 py-2 rounded-lg font-bold transition duration-300 hover:bg-green-100 hover:text-green-800">Pontos de coleta</a>
+                </li>
+                <li>
+                    <a href="/sobre" class="nav-item px-4 py-2 rounded-lg font-bold transition duration-300 hover:bg-green-100 hover:text-green-800">A equipe</a>
+                </li>
+                <li>
+                    <a href="/user" class="nav-item active px-4 py-2 rounded-lg font-bold transition duration-300 hover:bg-green-100 hover:text-green-800">Conta</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="sidebar bg-white">
+        <a href="/user" class="px-6 py-3 rounded-lg font-bold transition duration-300">Informações Pessoais</a>
+    </div>
+    <div class="main-content">
+        <div class="box">
+            <h3 class = 'sans-serif'><strong>Informações Pessoais</strong></h3><br><br><br>
+            <p><strong>Nome:</strong> {{user_nome}}</p><br><br>
+            <p><strong>Data de Nascimento:</strong> {{user_data}}</p><br><br>
+            <p><strong>Gênero:</strong> {{user_genero}}</p><br><br>
+            <p><strong>E-mail:</strong> {{user_email}}</p><br><br>
+            <p><strong>Senha:</strong> {{user_senha}}</p><br>
+            <a href="/auth/signup"><button class="botao">Redefinir informações</button></a><br>
+            <a href="/auth/logout"><button class="botao-logout">Log out</button></a>
+        </div>
+    </div>
 </body>
 </html>
